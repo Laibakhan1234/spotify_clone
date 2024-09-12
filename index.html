@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotiffysong-clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m1">
+                <div class="logo invert">
+                    <img src="logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li><img class="invert" src="home.svg" alt="HOME"> Home</li>
+                    <li><img class="invert" src="search.svg" alt="SEARCH">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey m1 rounded">
+                <div class="heading m1">
+                    <img class="invert" src="lib.svg" alt="">
+                    <h1>Your library</h1>
+                </div>
+
+                <div class="songlist">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/legal/" data-encore-id="textLink">
+                            <span data-encore-id="type">Legal</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/safetyandprivacy/" data-encore-id="textLink">
+                            <span data-encore-id="type">Safety &amp; Privacy Center</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/legal/privacy-policy/" data-encore-id="textLink">
+                            <span data-encore-id="type">Privacy Policy</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/legal/cookies-policy/" data-encore-id="textLink">
+                            <span data-encore-id="type">Cookies</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3" data-encore-id="textLink">
+                            <span data-encore-id="type">About Ads</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.spotify.com/pk-en/accessibility/" data-encore-id="textLink">
+                            <span data-encore-id="type">Accessibility</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-grey rounded">
+            <div class="header flex">
+                <div class="nav">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="btn">
+                    <button class="signup">Sign up</button>
+                    <button class="login">Log in</button>
+                </div>
+            </div>
+            <div class="spotifyplaylist">
+                <h1>Spotify Playlisit</h1>
+                <div class="cardcontainer">
+  
+
+                    <div  data-folder ="ncs" class="card">
+                        <i style="border: 2px rgb(59, 228, 119); padding: 30px; border-radius: 100%; background-color: rgb(59, 228, 119); color: black;"
+                            class="fa-duotone fa-solid fa-play"></i>
+                        <img
+                            src="https://img.freepik.com/premium-vector/name-surah-holy-quran-al-baqarah-chapter-cow-vector-arabic-calligraphy-desig_759200-660.jpg">
+                        <h2>Surah Baqra</h2>
+                        <p> الم</p>
+                    </div>
+
+                    <div  data-folder ="cs" class="card">
+                        <i style="border: 2px rgb(59, 228, 119); padding: 30px; border-radius: 100%; background-color: rgb(59, 228, 119); color: black;"
+                        class="fa-duotone fa-solid fa-play"></i>
+                        <img src="https://i.pinimg.com/originals/51/24/23/512423d4a1e895e919d5e64d8d9e2fbd.png">
+                        <h2>Surah Al-Kahf</h2>
+                        <p>سورة الكهف</p>
+                    </div>
+                    
+                    <div class="card" data-folder ="lcs" >
+                        <i style="border: 2px rgb(59, 228, 119); padding: 30px; border-radius: 100%; background-color: rgb(59, 228, 119); color: black;"
+                        class="fa-duotone fa-solid fa-play"></i>
+                        <img src="https://i.ytimg.com/vi/hziLR3ht_wU/maxresdefault.jpg">
+                        <h2>Surah Waqiah</h2>
+                        <p>الواقعة</p>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="songdetail">
+                        <h5 id="songName"></h5>
+            
+                    </div>
+                    <div class="songbtn">
+                        <i id="previous" class="fa-solid fa-backward"></i>
+                        <i id="play" class="fa-sharp-duotone fa-solid fa-play"></i>
+                        <i id="next" class="fa-solid fa-forward"></i>
+                    </div>
+                    <div class="songtime"></div>
+                    <div class="vol">
+                        <i class="fa-solid fa-volume-high"></i> 
+                        <div class="volbar-container">
+                            <input type="range" min="0" max="100" id="vol">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
